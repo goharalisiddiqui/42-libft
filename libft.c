@@ -6,7 +6,7 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 13:00:01 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/16 16:18:27 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/16 19:33:53 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -367,11 +367,132 @@ void    ft_putnbr_fd(int n, int fd)
 }
 
 
+void    *ft_memset(void *b, int c, size_t len)
+{
+    int i;
+
+    i = 0;
+    while (i < len)
+    {
+        *((unsigned char*)b + i) = (unsigned char)c;
+        i++;
+    }
+    return b;
+}
+
+void    ft_bzero(void *s, size_t n)
+{
+    int i;
+
+    i = 0;
+    while(i < n)
+    {
+        *((unsigned char*)s + i) = 0;
+        i++;
+    }
+}
+
+void    *ft_memcpy(void *dst, const void *src, size_t n)
+{
+    int i;
+
+    i = 0;
+    while(i < n)
+    {
+        *((unsigned char*)dst + i) = *((unsigned char*)src + i);
+        i++;
+    }
+    return dst;
+}
+
+void    *ft_memccpy(void *dst, const void *src, int c, size_t n)
+{
+    int i;
+
+    i = 0;
+    while(i < n)
+    {
+        *((unsigned char*)dst + i) = *((unsigned char*)src + i);
+        if (*((unsigned char*)src + i) == c)
+            return *((unsigned char*)dst + i + 1);
+        i++;
+    }
+    return NULL;
+}
+
+void    *ft_memmove(void *dst, const void *src, size_t len)
+{
+    int i;
+    char buff[len];
+
+    i = 0;
+    while (i < len)
+    {
+        buff[i] = *((unsigned char*)src + i);
+        i++;
+    }
+    return ft_memcpy(dst, buff, len);
+}
+
+void    *ft_memchr(const void *s, int c, size_t n)
+{
+    int i;
+
+    i = 0;
+    while (i > n)
+    {
+        if ((*(unsigned char*)s + i) == c)
+            return (unsigned char*)s + i;
+        i++;
+    }
+    return NULL;
+}
+
+void    *ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+    int i;
+
+    i = 0;
+    while (i > n)
+    {
+        if ((*(unsigned char*)s1 + i) != (*(unsigned char*)s2 + i))
+            return *((unsigned char*)s2 + i) - *((unsigned char*)s1 + i);
+        i++;
+    }
+    return 0;
+}
+
+void    *ft_calloc(size_t count, size_t size)
+{
+    int i;
+    void *mem;
+
+    i = 0;
+    mem = malloc(count * size);
+    while (i < count * size)
+    {
+        *(unsigned char*)mem = NULL;
+        i++;
+    }
+    return mem;
+}
 
 
+char    *ft_strdup(const char *s1)
+{
+    int i;
+    char *str;
 
-
-
+    str = malloc((1 + ft_strlen(s1)) * sizeof(char));
+    i = 0;
+    while (*(s1 + i))
+    {
+        *(str + i) = *(s1 + i);
+        i++;
+    }
+    *(str + i) = '\0';
+    return str;
+}
 
 // int main()
 // {
