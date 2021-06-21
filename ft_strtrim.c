@@ -6,13 +6,13 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 13:47:50 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/21 20:06:13 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/21 20:15:21 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strtrim_store(char *str, char *s1, int start, int end)
+static char	*ft_strtrim_store(char *str, const char *s1, int start, int end)
 {
 	int	i;
 
