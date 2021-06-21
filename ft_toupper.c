@@ -6,13 +6,15 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 12:45:33 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/17 12:45:35 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/21 20:08:54 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    ft_toupper(char c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
-    if (c >= 97 && c <= 122)
-        return c - 32;
-    return c;
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }

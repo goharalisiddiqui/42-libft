@@ -6,19 +6,21 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 12:32:30 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/17 12:32:48 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/21 19:55:16 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_strlen(char *str)
-{
-    int size;
+#include "libft.h"
 
-    size = 0;
-    while(*str)
-    {
-        size++;
-        str++;
-    }
-    return size;
+int	ft_strlen(char *str)
+{
+	int	size;
+
+	size = 0;
+	while (*str)
+	{
+		size++;
+		str++;
+	}
+	return (size);
 }

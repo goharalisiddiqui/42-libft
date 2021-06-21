@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_endl_fd.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/17 13:52:12 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/17 13:52:27 by gsiddiqu         ###   ########.fr       */
+/*   Created: 2021/06/20 17:00:08 by gsiddiqu          #+#    #+#             */
+/*   Updated: 2021/06/21 19:05:27 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void    ft_endl_fd(char *s, int fd)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    ft_putstr_fd(s, fd);
-    write(fd, "\n", 1);
+	t_list	*elem;
+
+	if (*lst != NULL)
+	{
+		elem = ft_lstlast(*lst);
+		(*elem).next = new;
+	}
+	else
+		*lst = new;
 }

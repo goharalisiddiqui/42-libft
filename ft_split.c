@@ -6,13 +6,13 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 13:48:34 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/17 13:48:48 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/21 17:53:28 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-char **ft_split(char const *s, char c)
+#include "libft.h"
+#include <stdio.h>
+char    **ft_split(char const *s, char c)
 {
     int num;
     int i;
@@ -21,35 +21,53 @@ char **ft_split(char const *s, char c)
     int j;
     int k;
 
+    if (s == NULL)
+        return NULL;
     i = 0;
     size = 0;
     num = 0;
-    while(s + i)
+    while(*(s + i))
     {
-        if ((s + i) == c);
+        if (*(s + i) == c)
+        {    
             num++;
+            while(*(s + i) == c)
+                i++;
+        }
+        else
+            i++;
     }
     arr = malloc((num + 1) * sizeof(char*));
     if (arr == NULL)
         return NULL;
     i = 0;
     k = 0;
-    while(s + i)
-        size = 0;
-        while(*(s + i + size) != c)
-            size++;
-        *(arr + k) = malloc((size + 1) * sizeof(char));
-        if (*(arr + k) == NULL)
-            return NULL;
-        j = 0;
-        while(j < size)
+    while(*(s + i))
+    {
+        if (*(s + i) == c)
+            i++;
+        else 
         {
-            *(*(arr + k) + j) = *(s + i);
-            j++;
+            size = 0;
+            while(*(s + i + size) != c && *(s + i + size))
+                size++;
+            *(arr + k) = malloc((size + 1) * sizeof(char));
+            if (*(arr + k) == NULL)
+            {
+                free(arr);
+                return NULL;
+            }
+            j = 0;
+            while(j < size)
+            {
+                *(*(arr + k) + j) = *(s + i);
+                j++;
+                i++;
+            }
+            *(*(arr + k) + j) = '\0';
+            k++;
         }
-        *(*(arr + k) + j) = '\0';
-        i++;
-        k++;
-    **(arr + k) = NULL;
+    }
+    *(arr + k) = NULL;
     return arr;
 }

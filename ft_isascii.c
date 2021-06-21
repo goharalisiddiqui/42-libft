@@ -6,13 +6,15 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 12:40:44 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/17 12:44:32 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/21 18:32:40 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isascii(char c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-    if (c >= 0 || c <= 127)
-        return 1;
-    return 0;
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

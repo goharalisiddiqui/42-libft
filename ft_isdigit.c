@@ -6,13 +6,15 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 12:39:56 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/17 12:40:06 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/21 18:33:08 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isdigit(char c)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
-    if (c >= 48 && c <= 57)
-        return 1;
-    return 0;
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
 }

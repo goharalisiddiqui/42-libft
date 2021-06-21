@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/17 13:55:25 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/21 19:35:18 by gsiddiqu         ###   ########.fr       */
+/*   Created: 2021/06/17 13:52:12 by gsiddiqu          #+#    #+#             */
+/*   Updated: 2021/06/21 19:39:24 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	if (src < dst && (((unsigned char *)src + len) > (unsigned char *)dst))
+	if (s != NULL)
 	{
-		while (i <= len)
-		{
-			*((char *)dst + len - i) = *((char *)src + len - i);
-			i++;
-		}
-		return (dst);
+		ft_putstr_fd(s, fd);
+		write(fd, "\n", 1);
 	}
-	else
-		return (ft_memcpy(dst, src, len));
 }
