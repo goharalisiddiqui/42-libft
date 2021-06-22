@@ -6,7 +6,7 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 13:53:01 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/21 20:21:35 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/22 13:09:43 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_putnbr_fd(int n, int fd)
 		}
 		while ((n / i) > 9)
 			i *= 10;
-		while (n > 0)
+		while (i > 0)
 		{
 			ft_putchar_fd((char)(n / i) + 48, fd);
 			n %= i;
