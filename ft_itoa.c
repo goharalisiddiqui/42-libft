@@ -6,7 +6,7 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 13:49:06 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/21 19:03:04 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/23 15:43:12 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ static int	ft_itoa_numfinder(int *n, int *i)
 
 	numchr = 0;
 	*i = 1;
-	if (*n <= 0)
+	if (*n < 0)
 	{
-		numchr ++;
+		numchr++;
 		if (*n == -2147483648)
 			(*n)++;
 		(*n) *= -1;
 	}
 	a = *n;
-	while ((a % 10) > 9)
+	while (a > 9)
 	{
 		numchr++;
 		a /= 10;
@@ -45,8 +45,8 @@ static int	ft_itoa_store(char *str, int numchr, int n, int i)
 	while (a < numchr)
 	{
 		*(str + a) = (char)((n / i) + 48);
-		i /= 10;
 		n %= i;
+		i /= 10;
 		a++;
 	}
 	*(str + a) = '\0';
@@ -68,7 +68,7 @@ char	*ft_itoa(int n)
 	if (num < 0)
 	{
 		*str = '-';
-		i = ft_itoa_store(str + 1, numchr, n, i);
+		i = ft_itoa_store(str + 1, numchr - 1, n, i);
 	}
 	else
 		i = ft_itoa_store(str, numchr, n, i);
