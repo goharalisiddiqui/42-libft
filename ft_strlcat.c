@@ -6,7 +6,7 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 12:36:46 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/21 19:53:07 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:32:58 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	size;
-	int	ind;
+	size_t	size;
+	size_t	ind;
 
 	size = ft_strlen(dst);
 	if (size > dstsize)

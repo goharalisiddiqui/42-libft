@@ -6,7 +6,7 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 13:48:34 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/22 14:30:57 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/25 18:22:59 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ static char	**ft_split_arr(char *s, char c)
 	num = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s != c)
 		{
 			num++;
-			while (*s == c)
+			while (*s != c && *s != '\0')
 				s++;
 		}
 		else

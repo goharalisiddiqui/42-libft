@@ -6,7 +6,7 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 13:46:42 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/21 19:57:35 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:28:51 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while ((*(s1 + i) || *(s2 + i)) && i < n)

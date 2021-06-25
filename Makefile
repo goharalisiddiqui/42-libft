@@ -6,15 +6,17 @@
 #    By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/17 15:51:48 by gsiddiqu          #+#    #+#              #
-#    Updated: 2021/06/21 14:14:37 by gsiddiqu         ###   ########.fr        #
+#    Updated: 2021/06/25 17:47:43 by gsiddiqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 
 OBJECTS_A = ft_memset.o ft_bzero.o ft_calloc.o ft_putendl_fd.o ft_isalpha.o ft_isdigit.o  \
 			ft_isascii.o ft_isprint.o ft_itoa.o ft_memcpy.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memmove.o \
-				ft_atoi.o ft_putchr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_tolower.o ft_toupper.o ft_substr.o \
+				ft_atoi.o ft_putchar_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_tolower.o ft_toupper.o ft_substr.o \
 					  ft_strlen.o  ft_strncmp.o \
 						
 

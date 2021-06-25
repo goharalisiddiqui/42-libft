@@ -6,7 +6,7 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 12:33:26 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/21 19:54:25 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:32:19 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int	ind;
+	size_t	ind;
 
 	ind = 0;
 	if (dstsize > 0)

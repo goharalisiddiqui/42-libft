@@ -6,7 +6,7 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 13:49:06 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/23 15:43:12 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:08:46 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,10 +69,10 @@ char	*ft_itoa(int n)
 	{
 		*str = '-';
 		i = ft_itoa_store(str + 1, numchr - 1, n, i);
+		if (num == -2147483648)
+			*(str + i) = '8';
 	}
 	else
 		i = ft_itoa_store(str, numchr, n, i);
-	if (num == -2147483648)
-		*(str + i - 1) = '8';
 	return (str);
 }

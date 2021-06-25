@@ -6,7 +6,7 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 13:53:01 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/22 13:09:43 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:31:20 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int		numchr;
 	int		i;
-	char	*str;
 
 	i = 1;
 	if (n == -2147483648)

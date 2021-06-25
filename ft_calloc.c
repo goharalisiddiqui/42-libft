@@ -6,7 +6,7 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 13:57:14 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/21 18:30:53 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:19:41 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*mem;
 
 	i = 0;
