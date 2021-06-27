@@ -6,12 +6,11 @@
 /*   By: gsiddiqu <gsiddiqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 13:48:34 by gsiddiqu          #+#    #+#             */
-/*   Updated: 2021/06/25 18:22:59 by gsiddiqu         ###   ########.fr       */
+/*   Updated: 2021/06/27 15:04:18 by gsiddiqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	**ft_split_arr(char *s, char c)
 {
